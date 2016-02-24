@@ -1,0 +1,3 @@
+/opt/ttrss/lock false nobody:nogroup 0777 0777
+/opt/ttrss/cache true nobody:nogroup 0666 0777
+/opt/ttrss/feed-icons true nobody:nogroup 0666 0777
