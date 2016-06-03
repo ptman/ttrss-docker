@@ -17,7 +17,7 @@ ENV DB_HOST="postgres" \
     MAIL_PASS="" \
     MAIL_SECURE="tls"
 
-RUN apk --no-cache add php-fpm php-json php-iconv php-pgsql php-dom php-curl php-mcrypt openssl \
+RUN apk --no-cache add php5-fpm php5-json php5-iconv php5-pgsql php5-dom php5-curl php5-mcrypt openssl \
     && wget -O /ttrss.tar.gz https://tt-rss.org/gitlab/fox/tt-rss/repository/archive \
     && mkdir /opt \
     && tar -xz -C /opt -f /ttrss.tar.gz \
@@ -26,7 +26,7 @@ RUN apk --no-cache add php-fpm php-json php-iconv php-pgsql php-dom php-curl php
     && sed -i \
     -e 's|^listen =.*$|listen = 9000|' \
     -e 's|;daemonize =.*$|daemonize = no|' \
-    /etc/php/php-fpm.conf
+    /etc/php5/php-fpm.conf
 COPY cont-init.d/ /etc/cont-init.d/
 COPY fix-attrs.d/ /etc/fix-attrs.d/
 COPY services.d/ /etc/services.d/
