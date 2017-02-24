@@ -1,5 +1,5 @@
 postgres:
-  image: postgres
+  image: postgres:alpine
   environment:
   - POSTGRES_USER=ttrss
   - POSTGRES_DB=ttrss
@@ -13,7 +13,7 @@ ttrss:
   - DB_USER=ttrss
   - BASEURL=http://localhost:8000/
 nginx:
-  image: nginx
+  image: nginx:stable-alpine
   links:
   - ttrss
   volumes_from:
