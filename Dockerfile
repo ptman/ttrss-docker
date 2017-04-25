@@ -22,7 +22,7 @@ RUN apk --no-cache add php5-fpm php5-json php5-iconv php5-pgsql php5-dom php5-cu
     && mkdir /opt \
     && tar -xz -C /opt -f /ttrss.tar.gz \
     && rm -f /ttrss.tar.gz \
-    && mv /opt/tt-rss.git /opt/ttrss \
+    && mv /opt/tt-rss-master-* /opt/ttrss \
     && sed -i \
     -e 's|^listen =.*$|listen = 9000|' \
     -e 's|;daemonize =.*$|daemonize = no|' \
