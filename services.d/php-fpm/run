@@ -1,2 +1,2 @@
 #!/usr/bin/execlineb -P
-/usr/bin/php-fpm
+/usr/bin/php-fpm5
