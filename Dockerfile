@@ -18,11 +18,11 @@ ENV DB_HOST="postgres" \
     MAIL_SECURE="tls"
 
 RUN apk --no-cache add php5-fpm php5-json php5-iconv php5-pgsql php5-dom php5-curl php5-mcrypt openssl \
-    && wget -O /ttrss.tar.gz https://tt-rss.org/gitlab/fox/tt-rss/repository/archive \
+    && wget -O /ttrss.tar.gz https://git.tt-rss.org/git/tt-rss/archive/master.tar.gz \
     && mkdir /opt \
     && tar -xz -C /opt -f /ttrss.tar.gz \
     && rm -f /ttrss.tar.gz \
-    && mv /opt/tt-rss-master-* /opt/ttrss \
+    && mv /opt/tt-rss /opt/ttrss \
     && sed -i \
     -e 's|^listen =.*$|listen = 9000|' \
     -e 's|;daemonize =.*$|daemonize = no|' \
