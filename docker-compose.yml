@@ -1,8 +1,12 @@
 postgres:
+  # You can lock down the postgres-version to e.g. postgres:10-alpine
   image: postgres:alpine
   environment:
   - POSTGRES_USER=ttrss
   - POSTGRES_DB=ttrss
+  # make a permanent store for the data and implement backups
+  # volumes:
+  # - ./data:/var/lib/postgresql/data
 ttrss:
   build: .
   links:

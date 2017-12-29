@@ -15,4 +15,7 @@ the configuration if you intend to use it in production.
 # Configuration
 
 Look at the env vars available in the `Dockerfile` and
-`cont-init.d/ttrss-config.sh`.
+`cont-init.d/ttrss-config.sh`. Make sure to check the settings for the postgres
+container in case you want to store the data somewhere permanently or lock down
+the postgres version in order to prevent updates that require dumping the
+database.
