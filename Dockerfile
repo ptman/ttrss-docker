@@ -17,7 +17,16 @@ ENV DB_HOST="postgres" \
     MAIL_PASS="" \
     MAIL_SECURE="tls"
 
-RUN apk --no-cache add php5-fpm php5-json php5-iconv php5-pgsql php5-dom php5-curl php5-mcrypt openssl \
+RUN apk --no-cache add \
+    openssl \
+    php5-curl \
+    php5-dom \
+    php5-fpm \
+    php5-iconv \
+    php5-json \
+    php5-mcrypt \
+    php5-pdo_pgsql \
+    php5-pgsql \
     && wget -O /ttrss.tar.gz https://git.tt-rss.org/git/tt-rss/archive/master.tar.gz \
     && mkdir /opt \
     && tar -xz -C /opt -f /ttrss.tar.gz \
