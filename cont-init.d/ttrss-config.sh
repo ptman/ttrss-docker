@@ -16,7 +16,7 @@ define('_SKIP_SELF_URL_PATH_CHECKS', true);
 define('FEED_CRYPT_KEY', '${FEED_CRYPT_KEY}');
 define('SINGLE_USER_MODE', false);
 define('SIMPLE_UPDATE_MODE', false);
-define('PHP_EXECUTABLE', '/usr/bin/php5');
+define('PHP_EXECUTABLE', '/usr/bin/php7');
 define('LOCK_DIRECTORY', 'lock');
 define('CACHE_DIR', 'cache');
 define('ICONS_DIR', 'feed-icons');
