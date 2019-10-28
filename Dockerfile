@@ -1,7 +1,7 @@
 # vim: set ft=dockerfile:
 FROM ptman/alpine-s6:latest
 # Author with no obligation to maintain
-MAINTAINER Paul Tötterman <paul.totterman@iki.fi>
+LABEL author="Paul Tötterman <paul.totterman@iki.fi>"
 
 ENV DB_HOST="postgres" \
     DB_NAME="ttrss" \
@@ -32,7 +32,6 @@ RUN apk --no-cache add \
     php7-pgsql \
     php7-session \
     && wget -O /ttrss.tar.gz https://git.tt-rss.org/git/tt-rss/archive/master.tar.gz \
-    && mkdir /opt \
     && tar -xz -C /opt -f /ttrss.tar.gz \
     && rm -f /ttrss.tar.gz \
     && mv /opt/tt-rss /opt/ttrss \
