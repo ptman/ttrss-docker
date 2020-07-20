@@ -1,3 +1,7 @@
+There is an official dockerfile at https://git.tt-rss.org/fox/ttrss-docker-compose
+But it seems to install the newest ttrss on each container start.
+Which isn't great for reproducibility
+
 # Quickstart
 
 Note that this isn't a production setup, but fairly close. Make sure to change
